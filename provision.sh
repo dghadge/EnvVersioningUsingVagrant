@@ -7,18 +7,21 @@ dpkg -s npm &>/dev/null || {
   ln -s /usr/bin/nodejs /usr/bin/node
 }
 
-command -v hubot &>/dev/null || {
+  command -v hubot &>/dev/null || {
   npm install -g yo generator-hubot
+}
+
+command -v hubot &>/dev/null || {
   npm install -g hubot coffee-script
 }
 
-#dpkg -s libicu-dev &>/dev/null || {
-#  apt-get -y install libexpat1-dev libicu-dev
-#}
+dpkg -s libicu-dev &>/dev/null || {
+  apt-get -y install libexpat1-dev libicu-dev
+}
 
-#cp /vagrant/upstart/myhubot.conf /etc/init/myhubot.conf
+cp /vagrant/upstart/myhubot.conf /etc/init/myhubot.conf
 
-#sudo -u vagrant -i sh -c 'cd /vagrant/myhubot; npm install'
+sudo -u vagrant -i sh -c 'cd /vagrant/myhubot; npm install'
 
-#service myhubot restart
+service myhubot restart
 
