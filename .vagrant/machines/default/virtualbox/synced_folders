@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","rsync_exclude":[".git/","myhubot/node_modules"],"guestpath":"/vagrant","hostpath":"/Users/HeMan/hubotaws","disabled":false,"owner":"vagrant","group":"vagrant"}}}
